@@ -6,7 +6,7 @@ Instrucciones para ejecutar localmente:
 
 ```bash
 git clone <tu-repo.git>
-cd <repo>/testeo-python-cs-datos
+cd d:\Bruno\ciencia de datos\testeo-python-cs-datos
 ```
 
 2. Crea y activa un entorno virtual:
@@ -24,10 +24,17 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-4. Ejecuta la app:
+4. Ejecuta la app desde la carpeta correcta:
 
 ```bash
+cd "d:\Bruno\ciencia de datos\testeo-python-cs-datos"
 streamlit run streamlit_app.py
+```
+
+   O ejecuta directamente con la ruta completa:
+
+```bash
+streamlit run "d:\Bruno\ciencia de datos\testeo-python-cs-datos\streamlit_app.py"
 ```
 
 5. Abre en el navegador: `http://localhost:8501`
