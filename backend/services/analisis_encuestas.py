@@ -46,3 +46,17 @@ def obtener_graficos():
         })
 
     return resultado
+
+def obtener_resumen():
+
+    df = get_data()
+
+    total_preguntas = len(df.columns)
+
+    if "Marca temporal" in df.columns:
+        total_preguntas -= 1
+
+    return {
+        "total_respuestas": len(df),
+        "total_preguntas": total_preguntas
+    }

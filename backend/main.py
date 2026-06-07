@@ -3,7 +3,8 @@ from fastapi import FastAPI
 from backend.services.analisis_encuestas import (
     obtener_preguntas,
     obtener_estadisticas,
-    obtener_graficos
+    obtener_graficos,
+    obtener_resumen
 )
 
 from fastapi.middleware.cors import CORSMiddleware
@@ -37,3 +38,8 @@ def estadisticas(pregunta: str):
 def graficos():
 
     return obtener_graficos()
+
+@app.get("/resumen")
+def resumen():
+
+    return obtener_resumen()
