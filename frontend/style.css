@@ -1,4 +1,4 @@
-
+/* ESTILO GRAFICOS Y MENU*/
 
 
 body {
@@ -18,12 +18,14 @@ h1 {
     border-radius: 10px;
 }
 
+/* TAMAÑO GRAFICOS*/
 canvas {
     width: 250px !important;
     height: 250px !important;
     margin: auto;
 }
 
+/*MENU*/
 .menu {
     text-align: center;
     margin-top: 100px;
