@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+}
+
+.grafico-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+canvas {
+     width: 250px !important;
+    height: 250px !important;
+    margin: auto;
+}

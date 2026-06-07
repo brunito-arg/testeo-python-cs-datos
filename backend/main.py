@@ -6,7 +6,18 @@ from backend.services.analisis_encuestas import (
     obtener_graficos
 )
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.get("/")
 def home():
