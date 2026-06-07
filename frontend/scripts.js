@@ -61,8 +61,6 @@ async function cargarGraficos() {
 
                     datalabels: {
 
-                        
-
                         formatter: (value) => {
                             return value;
                         },

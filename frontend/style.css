@@ -1,3 +1,6 @@
+
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 30px;
@@ -16,7 +19,31 @@ h1 {
 }
 
 canvas {
-     width: 250px !important;
+    width: 250px !important;
     height: 250px !important;
     margin: auto;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.boton {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background-color: #007bff;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+}
+
+.boton:hover {
+    background-color: #0056b3;
 }
