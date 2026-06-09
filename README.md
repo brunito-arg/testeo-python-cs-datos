@@ -243,3 +243,17 @@ Frontend (próxima etapa)
 - Exportación a PDF.
 - Análisis estadístico avanzado.
 - Actualización automática de datos desde Google Forms.
+
+
+###################### RESUMEN
+git clone REPOSITORIO
+
+cd testeo-python-cs-datos
+
+python -m venv .venv
+
+.venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python -m uvicorn backend.main:app --reload
