@@ -28,6 +28,19 @@ def obtener_estadisticas(pregunta):
     }
 
 
+
+PREGUNTAS_BARRAS = [
+    "elija motivos de su felicidad",
+    
+]
+
+PREGUNTAS_TORTA = [
+    "estas feliz",
+    "¿Que porcentaje de felicidad sentis ahora mismo?"
+    
+]
+
+
 def obtener_graficos():
 
     df = get_data()
@@ -36,7 +49,7 @@ def obtener_graficos():
 
     for columna in df.columns:
 
-        # Opcional: ignorar marca temporal
+        #ignora marca temporal
         if columna.lower() == "marca temporal":
             continue
 
@@ -44,6 +57,7 @@ def obtener_graficos():
 
         resultado.append({
             "pregunta": columna,
+            "tipo_grafico": obtener_tipo_grafico(columna),
             "labels": conteo.index.tolist(),
             "values": conteo.values.tolist()
         })
@@ -63,3 +77,13 @@ def obtener_resumen():
         "total_respuestas": len(df),
         "total_preguntas": total_preguntas
     }
+
+def obtener_tipo_grafico(pregunta):
+
+    if pregunta in PREGUNTAS_BARRAS:
+        return "bar"
+
+    if pregunta in PREGUNTAS_TORTA:
+        return "pie"
+
+    return "pie"

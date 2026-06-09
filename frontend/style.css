@@ -1,5 +1,6 @@
-/* ESTILO GRAFICOS Y MENU*/
-
+/* ==========================================
+   ESTILO GENERAL
+========================================== */
 
 body {
     font-family: Arial, sans-serif;
@@ -11,21 +12,58 @@ h1 {
     text-align: center;
 }
 
+/* ==========================================
+   CONTENEDOR DE GRAFICOS
+========================================== */
+
+#graficos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
 .grafico-card {
     background: white;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 10px;
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* TAMAÑO GRAFICOS*/
-canvas {
+.card-torta {
+    width: 350px;
+}
+
+.card-barras {
+    width: 850px;
+}
+
+/* ==========================================
+   GRAFICOS
+========================================== */
+
+.grafico-torta {
     width: 250px !important;
     height: 250px !important;
     margin: auto;
 }
 
-/*MENU*/
+.grafico-barras {
+    width: 700px !important;
+    height: 350px !important;
+    margin: auto;
+}
+
+/* ==========================================
+   MENU
+========================================== */
+
 .menu {
     text-align: center;
     margin-top: 100px;
@@ -33,17 +71,17 @@ canvas {
 
 .boton {
     display: inline-block;
-
     padding: 15px 25px;
 
     background-color: #007bff;
     color: white;
 
     text-decoration: none;
-
     border-radius: 8px;
 
     font-size: 18px;
+
+    transition: background-color 0.3s ease;
 }
 
 .boton:hover {
